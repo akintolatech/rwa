@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link type="text/css" href="../styles/style.css" rel="stylesheet" />
+    <link type="text/css" href="{% static 'styles/style.css' %}" rel="stylesheet" />
     <link type="text/css" href="../styles/about.css" rel="stylesheet" />
     <link type="text/css" href="../styles/shop.css" rel="stylesheet" />
     <link type="x-icon" href="img/buka.ico" rel="icon" />
@@ -19,13 +20,13 @@
         <div class="wrap">
             
             <div class="site-id logo">
-                <img src="../img/buka-logo.svg" />
+                <img src="{% static 'img/buka-logo.svg' %}" />
             </div>
 
             <div class="pry-nav">
                 <ul>
                     <a href="../index.html"><li>Home</li></a> 
-                    <a href="shop.html"><li>Menu</li></a>   
+                    <a href="{% url 'website:menu' %}"><li>Menu</li></a>
                     <a href="about.html"><li>About</li></a>
                     <!-- <a href="contact.html"><li>Contact</li></a> -->
                     <!-- <a href="services.html"><li>Services</li></a> -->
