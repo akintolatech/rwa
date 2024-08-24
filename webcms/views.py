@@ -1,10 +1,13 @@
 from django.shortcuts import render
+from .models import WebDetails
 
 
 # Create your views here.
 def index(request):
+
+    business = WebDetails.objects.get(id=1)
     context = {
-        "msg": "Welcome to Django"
+        "business": business
     }
     return render(request, "webcms/pages/index.html", context)
 

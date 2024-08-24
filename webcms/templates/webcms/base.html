@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}{% endblock %}&#8482;</title>
     <link type="text/css" href="{% static 'styles/style.css' %}" rel="stylesheet" />
     <link type="text/css" href="{% static 'styles/shop.css' %}" rel="stylesheet" />
     <link type="text/css" href="{% static 'styles/about.css' %}" rel="stylesheet" />
@@ -85,14 +85,11 @@
             <div class="footer-text-container">
 
                 <ul>
-                    <li class="footer-heading">Buka&#8482;</li>
-                    <li>
-                        Amazing Deligts Curated from the best produce<br/> 
-                        Craving for something tasty, order now and get it delivered to you doorstep.
-                    </li>
-                    <li>Jos, Plateau State.</li>
+                    <li class="footer-heading">{{ business.name_of_business }}&#8482;</li>
+                    <li>{{ business.phrase_of_business }}</li>
+                    <li>{{ business.address_of_business }}</li>
                     <li>Monday - Saturday 8:00AM - 5:30PM <br/>Sundays Closed</li>
-                    <li><a href="tel:08162065896" >Call: +234 816 2065 896</a></li>
+                    <li><a href="tel:{{ business.phone_of_business }}" >{{ business.phone_of_business }}</a></li>
                     
                 </ul>
 
@@ -116,26 +113,26 @@
                 <!-- <div class="site-id">
                         <img src="img/estate-01.png" />
                 </div> -->
-                <h4>Copyright © 2023 Real Estate Company</h4>
+                <h4>Copyright © {{ business.name_of_business }} &#8482;</h4>
 
                 <div class="social-media">
                 
                     <div class="contact-icon">
-                        <img src="img/social media/fb-01.svg"/>
+                        <img src="{% static 'img/social media/fb-01.svg' %}"/>
                     </div>
 
                 
                     <div class="contact-icon">
-                        <img src="img/social media/whatsapp-01.svg"/>
+                        <img src="{% static 'img/social media/whatsapp-01.svg' %}"/>
                     </div>
 
                 
                     <div class="contact-icon">
-                        <img src="img/social media/tiktok-01.svg"/>
+                        <img src="{% static 'img/social media/tiktok-01.svg' %}"/>
                     </div>
 
                     <div class="contact-icon">
-                        <img src="img/estate-01.png"/>
+                        <img src="{% static 'img/estate-01.png' %}"/>
                     </div>
 
                 </div>
