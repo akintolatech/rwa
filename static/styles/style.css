@@ -706,9 +706,11 @@ li {
 }
 
 .footer-text-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* flex-grow: 2, 1, 1; */
 }
 
 /* for larger screens */
@@ -719,6 +721,9 @@ li {
         
     }
 
+    .footer-first-child {
+        width: 40%;
+    }
 }
 
 

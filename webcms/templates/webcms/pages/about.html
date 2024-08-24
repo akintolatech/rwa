@@ -23,7 +23,7 @@
 {% endblock %}
 
 {% block content %}
-    <!-- section -->
+    <!-- Mission section -->
     <div class="section">
         <h1>Mission</h1>
 
@@ -47,6 +47,7 @@
 
     </div>
 
+    <!-- Success story section -->
     <div class="text-box full">
         <h1>Success Story</h1>
         <p>
@@ -109,13 +110,13 @@
             <div class="contact-map-details">
                 <h2 style="margin-top: 0;">Reach Out</h2>
                 <h3>Address</h3>
-                <p>1 Biggie Street, Filling Dabo, Dei Dei,<br/> Abuja</p>
+                <p>{{ business.address_of_business }}</p>
 
                 <h3>Phone</h3>
-                <p>+234 809 999 9369 <br/>+234 816 206 5896</p>
+                <p>{{ business.phone_of_business }} <br/>{{ business.phone_of_business }}</p>
 
                 <h3>Email</h3>
-                <p>info@ssd.com.ng <br/>akintolatech@gmail.com</p>
+                <p>{{ business.email_of_business }}<br/>{{ business.email_of_business }}</p>
 
                 <a href="tel:08162065896" ><button style="margin-top: 30px; width: 160px;">Call Now</button></a>
 
@@ -155,6 +156,7 @@
         </div>
 
     </div>
+
 {% endblock %}
 
 

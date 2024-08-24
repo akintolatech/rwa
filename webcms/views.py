@@ -13,13 +13,17 @@ def index(request):
 
 
 def menu(request):
+    business = WebDetails.objects.get(id=1)
     context = {
-        "msg": "Menu Page"
+        "business": business
     }
     return render(request, "webcms/pages/menu.html", context)
 
+
 def about(request):
+    business = WebDetails.objects.get(id=1)
+
     context = {
-        "msg": "About Page"
+        "business": business
     }
     return render(request, "webcms/pages/about.html", context)
