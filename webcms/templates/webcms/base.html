@@ -8,6 +8,7 @@
     <title>{% block title %}{% endblock %}</title>
     <link type="text/css" href="{% static 'styles/style.css' %}" rel="stylesheet" />
     <link type="text/css" href="{% static 'styles/shop.css' %}" rel="stylesheet" />
+    <link type="text/css" href="{% static 'styles/about.css' %}" rel="stylesheet" />
     <link type="x-icon" href="{% static 'img/buka.ico' %}" rel="icon" />
     <script src="{% static 'js/jquery.js' %}"></script>
 
@@ -23,9 +24,9 @@
 
             <div class="pry-nav">
                 <ul>
-                    <a href="index.html"><li>Home</li></a> 
+                    <a href="{% url 'website:index' %}"><li>Home</li></a>
                     <a href="{% url 'website:menu' %}"><li>Menu</li></a>
-                    <a href="pages/about.html"><li>About</li></a>
+                    <a href="{% url 'website:about' %}"><li>About</li></a>
                     <!-- <a href="pages/contact.html"><li>Contact Us</li></a> -->
                 </ul>  
                 
@@ -97,11 +98,9 @@
 
                 <ul>
                     <li class="footer-heading">Important Links</li>
-                    <a href="index.html"><li>Home</li></a>
-                    <a href="pages/menu.html"><li>Menu</li></a>
-                    <a href="pages/about.html"><li>About</li></a>
-                    <!-- <a href="pages/services.html"><li>Services</li></a> -->
-                    <!-- <a href="pages/contact.html"><li>Contact</li></a> -->
+                    <a href="{% url 'website:index' %}"><li>Home</li></a>
+                    <a href="{% url 'website:menu' %}"><li>Menu</li></a>
+                    <a href="{% url 'website:about' %}"><li>About</li></a>
                 </ul>   
                 <ul>
                     <li class="footer-heading">Reach Out</li>
